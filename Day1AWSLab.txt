@@ -30,5 +30,8 @@ Lab 5 - S3 and s3 Glacier
         current marks / grades
         Students address and other details
         Course List with detail contents
-    
-    
+Lab 6-    
+        Billing dashboard - Billing Pref - Cost Management Preferences
+                Receive Free Tier Usage Alerts - email address
+        
+        Budgets = Create a new budget -> 1 $ for blending cost , 50% forcasted -> email 
