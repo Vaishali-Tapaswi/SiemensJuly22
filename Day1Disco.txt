@@ -19,3 +19,7 @@ Web Site
 	Load Balancer
 	FailOver
 	Scalability
+
+characteristics
+	https://www.geeksforgeeks.org/characteristics-of-cloud-computing/
+	https://www.jigsawacademy.com/blogs/cloud-computing/characteristics-of-cloud-computing/
