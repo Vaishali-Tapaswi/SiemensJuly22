@@ -1,0 +1,4 @@
+Lab1 - Create a free tier account for AWS 
+    Search - AWS Free Tier account
+    Select create a free account
+    
