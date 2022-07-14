@@ -5,3 +5,12 @@ Part 1 -
       Rich Internet Application (RIA)
 
     Web Server
+    Monolith Applications
+	
+    Service Oriented Architecture (SOA)
+
+    Micro Services 
+        Load -> Predictable increase/UnPredictable
+        Scalability
+        
+        https://martinfowler.com/articles/microservices.html
