@@ -35,3 +35,20 @@ Lab 6-
                 Receive Free Tier Usage Alerts - email address
         
         Budgets = Create a new budget -> 1 $ for blending cost , 50% forcasted -> email 
+Lab 7 - IAM
+    Create user tst1 -> Console Access -> download csv file
+    Other Browser -> click on url from the csv file
+        give login password and check persmissions for IAM and s3 -> no permission
+    Edit tst1 user -> permissions -> s3readonly policy
+        save
+    Other Browser -> click on url from the csv file
+        give login password and check persmissions for IAM and s3(readonly for s3)
+            try uploading / creating s3 bucket
+    Create a group -> developers -> policy -> s3fullaccess
+       create one user -> dev1 -> select group developers
+        login and check permissions
+       create one user - dev2 - no group
+       Go to developers group and add dev2 user 
+        login and check permissions
+        
+
