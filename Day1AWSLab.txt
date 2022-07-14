@@ -2,3 +2,10 @@ Lab1 - Create a free tier account for AWS
     Search - AWS Free Tier account
     Select create a free account
     
+Lab2 - https://aws.amazon.com/about-aws/global-infrastructure/regions_az/
+    Create a bucket in us-east-1 
+        upload 3/4 files and check the url of bucket and files
+    Create a bucket in us-east-2
+        upload 3/4 files and check the url of bucket and files
+    chech difference in both the urls.
+   
