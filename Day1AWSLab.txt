@@ -19,3 +19,16 @@ Lab 4 - create new bucket -> enable versioning and public access
     Modify and upload file again, check versions
         see url and file (compare to earlier url)
     multiple versions for object
+Lab 5 - S3 and s3 Glacier
+    https://youtu.be/_I14_sXHO8U
+    https://aws.amazon.com/s3/storage-classes/glacier/
+    
+    University - s3/s3 glacier (for s3 - versioning, public access)
+        Current Syllabus 
+        Last 2 years students records
+        Last 10 years syllabus + students records 
+        current marks / grades
+        Students address and other details
+        Course List with detail contents
+    
+    
