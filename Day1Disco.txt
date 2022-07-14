@@ -1,0 +1,7 @@
+Part 1 -
+    Application
+      Rich Client
+      Thin Client
+      Rich Internet Application (RIA)
+
+    Web Server
