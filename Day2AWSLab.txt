@@ -24,7 +24,7 @@ Lab2 - EC2
       click on RDP, give that password
         Check directory/Disable windows firewalls
   
-Lab2 - EC2 - web server 
+Lab3 - EC2 - web server 
   Select Region - us - East 1
     Select current ec2 instance - Terminate
   Search for EC2 Dashboard
@@ -65,3 +65,15 @@ Lab2 - EC2 - web server
     click on  instance - check dns Public IPv4 DNS
      browser -> http://dns:8080
      
+Lab 4 - ec2 
+  Application and OS Images (Amazon Machine Image)  - Quick Start - Amazon linux
+  Create key pair - select ppk
+  launch
+  
+  Run putty - 
+    Host - dns name or public ip
+    Connection -  SSH - Auth
+        Browse - select ppk file
+    connect 
+      username - ec2-user 
+    ls / pwd/ cd..
