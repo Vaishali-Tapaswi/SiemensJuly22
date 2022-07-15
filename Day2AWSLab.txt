@@ -2,4 +2,4 @@ Lab1 - VPC
   https://www.khanacademy.org/computing/code-org/computers-and-the-internet/internet-works/v/the-internet-ip-addresses-and-dns
   https://docs.aws.amazon.com/vpc/latest/userguide/how-it-works.html
 
-http://ec2-23-20-7-251.compute-1.amazonaws.com:8080/
+
