@@ -24,3 +24,44 @@ Lab2 - EC2
       click on RDP, give that password
         Check directory/Disable windows firewalls
   
+Lab2 - EC2 - web server 
+  Select Region - us - East 1
+    Select current ec2 instance - Terminate
+  Search for EC2 Dashboard
+    Launch instance
+      Name - Demo2
+      Application and OS Images (Amazon Machine Image)  - Quick Start - Windows
+      AMI - Free Tier Eligible -> Microsoft Windows Server 2019 Base
+      Instance Type -  Free Tier Eligible  ->t2.micro
+      KeyPair  
+          select demo1 - pem file
+      Network settings -  (RDP from anywhere)
+                      + tcp on port 8080 from anywhere
+      Configure Storage -no change 
+      Launch Instance
+      
+  Connect to that instance
+      wait for instance state to change to Running
+      select instance and click on connect
+        RDP -> Download RD file
+        click on "get password" -> select pem file which we have download , decrypt 
+      download https://nodejs.org/dist/v16.16.0/node-v16.16.0-x64.msi on localmachine
+     click on RDP, give that password
+        Check directory/Disable windows firewalls
+        Create a new folder (tmp)
+        copy download file in tmp folder
+        create t1.js in tmp
+          var http = require('http');
+
+          //create a server object:
+          http.createServer(function (req, res) {
+            res.write('<h1>Hello World!</h1>'); //write a response to the client
+            res.end(); //end the response
+          }).listen(8080); //the server object listens on port 8080
+        open cmd prompt 
+          in tmp>node t1.js
+        Browser -> http://localhost:8080
+  Host Machine
+    click on  instance - check dns Public IPv4 DNS
+     browser -> http://dns:8080
+     
