@@ -77,3 +77,23 @@ Lab 4 - ec2
     connect 
       username - ec2-user 
     ls / pwd/ cd..
+
+Lab 5 - RDS
+  Search - RDS (Relational Data System)
+    Create database
+      Standard create
+      Engine type - MySQL (8.0.28)
+      Templates - Free Tier
+      Settings - 
+          DB instance identifier -db
+          master username - admin
+          password - 
+          public access - Yes
+     Create database
+  Chrome - Plugin - MySQL
+    MySQL admin plugin -> install
+    Give details -
+    Connect
+    
+      
+  
