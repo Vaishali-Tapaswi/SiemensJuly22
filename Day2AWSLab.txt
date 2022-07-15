@@ -96,4 +96,6 @@ Lab 5 - RDS
     Connect
     
       
-  
+  Lab6 - dynamoDB
+    https://youtu.be/sI-zciHAh-4
+    Create a table and add 4/5 items in table
