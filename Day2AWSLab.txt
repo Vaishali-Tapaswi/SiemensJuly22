@@ -2,4 +2,25 @@ Lab1 - VPC
   https://www.khanacademy.org/computing/code-org/computers-and-the-internet/internet-works/v/the-internet-ip-addresses-and-dns
   https://docs.aws.amazon.com/vpc/latest/userguide/how-it-works.html
 
-
+Lab2 - EC2
+  Select Region - us - East 1
+  Search for EC2 Dashboard
+    Launch instance
+      Name - Demo1
+      Application and OS Images (Amazon Machine Image)  - Quick Start - Windows
+      AMI - Free Tier Eligible -> Microsoft Windows Server 2019 Base
+      Instance Type -  Free Tier Eligible  ->t2.micro
+      KeyPair  
+          Create new keypair - demo1 - pem file
+      Network settings - No change (RDP from anywhere)
+      Configure Storage -no change 
+      Launch Instance
+      
+  Connect to that instance
+      wait for instance state to change to Running
+      select instance and click on connect
+        RDP -> Download RD file
+        click on "get password" -> select pem file which we have download , decrypt 
+      click on RDP, give that password
+        Check directory/Disable windows firewalls
+  
