@@ -1,3 +1,5 @@
+
+---------------------------------
 Lab 7 - 
 	Error - package my is not in GOROOT (C:\Program Files\Go\src\my)
 	-> go version > 1.18 (should use go.mod)
