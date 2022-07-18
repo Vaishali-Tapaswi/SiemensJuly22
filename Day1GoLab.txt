@@ -1,3 +1,10 @@
+Lab 2 - Write Lab2.go
+        create a variable & Print 
+                	x := 10
+	                fmt.Println("Value of x = ",x)
+           Write x:=20 again and see error
+        Read OS documentation and print hostname 
+-------------------
 Lab - Download/Install Go + Visual Studio Code
 Lab1 - Create a folder ../Demo1_18
         Create a Lab1.go
