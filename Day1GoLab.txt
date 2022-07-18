@@ -1,3 +1,49 @@
+Lab 6 - Working with external helpers
+	Lab6.go
+		package main
+
+		import (
+			"fmt"
+
+		)
+
+		func main(){
+			x,y:=0,0
+			fmt.Print("Enter Number 1 : ")
+			fmt.Scanln(&x)
+			fmt.Print("Enter Number 2 : ")
+			fmt.Scanln(&y)
+			hello()
+			sum :=add(x,y)
+			sub :=sub(x,y)
+			fmt.Println("Sum = " , sum)
+			fmt.Println("Subtraction = " , sub)
+		}
+	Lab6Helper.go
+		package main
+		import "fmt"
+		func hello(){
+			fmt.Println("Hello Function invoked ..")
+		}
+
+		func add(x int,y int)  int  {
+			fmt.Println("Add invoked with " , x, y)
+			return x+y
+		}
+
+		func sub(x int,y int)  int  {
+			fmt.Println("Sub invoked with " , x, y)
+			return x-y
+		}
+
+	cmd>go run Lab6.go 
+		Observe error
+	cmd>go run Lab6.go Lab6Helper.go
+		Success
+	Modify Lab6Helper.go to change package name to my
+	Modify Lab6.go to invoke my package
+		Observe error
+		
 Lab 5 - Accept a number on command line (os) -> say count
 	declare array (marks []int)
 	accept numbers from user and keep it in array
