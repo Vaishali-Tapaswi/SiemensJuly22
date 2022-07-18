@@ -1,9 +1,44 @@
+Lab 3 - 
+	Accept Name and Age from user and print the details
+	if Age > 18 print -> Major
+		else print Minor
+	-------> If statement and if expression
+		func main(){
+			name := "abc"
+			fmt.Println("Name before scanln is " , name)
+			fmt.Print("Enter your Name : ")
+		/*	count, _ := fmt.Scanln(&name)
+			fmt.Println("Count  = " , count)
+		*/
+			fmt.Scanln(&name)
+			fmt.Println("Name after scanln is " , name)
+		}
+
+-------------------
+
 Lab 2 - Write Lab2.go
         create a variable & Print 
                 	x := 10
 	                fmt.Println("Value of x = ",x)
            Write x:=20 again and see error
         Read OS documentation and print hostname 
+		/*	hostname, err := os.Hostname()
+			if err == nil {
+				fmt.Println("Host Name = ", hostname)
+			} else {
+				fmt.Println("Error ", err)
+			}
+		*/
+			hostname, _ := os.Hostname()
+			fmt.Println("Host Name = ", hostname)
+
+		import "fmt"
+		import "os"
+		Or
+		import (
+			"fmt"
+			"os"
+		)
 -------------------
 Lab - Download/Install Go + Visual Studio Code
 Lab1 - Create a folder ../Demo1_18
