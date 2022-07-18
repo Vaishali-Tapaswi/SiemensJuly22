@@ -1,0 +1,20 @@
+Lab - Download/Install Go + Visual Studio Code
+Lab1 - Create a folder ../Demo1_18
+        Create a Lab1.go
+        package main
+
+        import "fmt"
+
+        func main() {
+          fmt.Println("Hello World!!")
+        }
+
+    cmd in same dir>go build Lab1.go
+        -> observe created exe and run (by directly double clicking or typing Lab1.exe on cmd prompt
+    cmd>go run Lab1.go
+    cmd>go fmt Lab1.go (Indentations etc)
+    
+    Modify code to have enter after main() and before { -> observe error
+ 
+    Modify package name -> check error
+    Modify function name main -> check error / messages
