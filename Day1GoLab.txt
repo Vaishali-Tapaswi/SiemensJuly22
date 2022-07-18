@@ -1,3 +1,18 @@
+Lab 7 - 
+	Error - package my is not in GOROOT (C:\Program Files\Go\src\my)
+	-> go version > 1.18 (should use go.mod)
+	set GO111MODULE=off
+	Run and check error
+		cannot find package "my" in any of:
+			C:\Program Files\Go\src\my (from $GOROOT)
+			C:\Users\admin\go\src\my (from $GOPATH)
+	create a folder c:\simensGo\src\my and copy lab6Helper.go in same
+	SET GOPATH=c:\simensGo
+		-> found package my
+		.\Lab6.go:14:5: undefined: my.hello
+		(as h is small - private)
+	Modify method names to start with capital alphabet and test 
+	
 Lab 6 - Working with external helpers
 	Lab6.go
 		package main
