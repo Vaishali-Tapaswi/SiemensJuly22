@@ -1,3 +1,34 @@
+Lab 8 - Write a struct Emp - empno int, ename string, salary int
+        Write Print method to show all the details
+        Write incr method accepting int arg(pern) and change salary by that %age
+        
+Lab 7 - Receiver Method
+        package main
+        import (
+                "fmt"
+        )
+
+        type Point struct {
+                x int
+                y int
+        }
+
+        func main(){
+                p1 := Point{20,50}
+                fmt.Println("Original Point " , p1)
+                p1.shift( 1,3)
+                fmt.Println("After Shift " , p1)
+
+
+        }
+
+        func (pint *Point) shift(x, y int)  {
+            pint.x += x
+                pint.y+=y
+                fmt.Println("In shift ", pint)
+        }
+
+
 Lab 6 - Write a method called shift(point Point, x,y as int) where point should be shifted (add x to x and y co-ordinates)
         Write a method add accepting two points and create third point (x+x1, y+y1)
           package main
