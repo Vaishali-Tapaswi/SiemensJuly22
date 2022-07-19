@@ -1,3 +1,51 @@
+Lab 11 - Create a struct Student(Name, Marks)
+        Accept a number from user, create a slice for those many students (name and marks should be accepted from user)
+         initialize Slice by using make
+                a := make([]Studnet, 1)
+                
+Lab 10 - Dynamic Size (Lab2) - Slice
+        package main
+
+        import(
+                "fmt"
+        )
+
+        func main(){
+                primes := [2]int{2, 3}
+                fmt.Println("Primes Details " , primes)
+                sl1:= primes[:2]
+                fmt.Println("Sl1 Details " , sl1 , "Length = ", len(sl1)," , Capacity =  " , cap(sl1))
+                sl1 = append(sl1,0)
+                fmt.Println("Sl1 Details " , sl1 , "Length = ", len(sl1)," , Capacity =  " , cap(sl1))
+
+                sl1 = append(sl1,1)
+                fmt.Println("Sl1 Details " , sl1 , "Length = ", len(sl1)," , Capacity =  " , cap(sl1))
+        }
+        
+        Try accessing and appending item outsize capcity and see capacity getting doubled
+        
+Lab 9 - Create a new folder (demo3_20) - Lab1
+        Lab1 - Array -> FIxed Size
+                package main
+
+                import(
+                        "fmt"
+                )
+
+                func main(){
+                        primes := [6]int{2, 3, 5, 7, 11, 13}
+                        fmt.Println(primes)
+                        fmt.Println("\n\n")
+                        for i:=0;i<len(primes);i++{
+                                fmt.Println("------",primes[i])
+                        }
+                        primes[6]=333
+                        fmt.Println("\n")
+                        fmt.Println(primes)
+                        fmt.Println("\n")
+                }
+        Try accessing primes[7], modify / print -> see error
+
 Lab 8 - Write a struct Emp - empno int, ename string, salary int
         Write Print method to show all the details
         Write incr method accepting int arg(pern) and change salary by that %age
