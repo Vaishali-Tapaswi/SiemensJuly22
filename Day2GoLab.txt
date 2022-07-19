@@ -1,0 +1,28 @@
+Lab2 - Replace sqr and cube functions with go library math.power
+Lab1 - Default variable reference(method), multiple returns, named returnd
+      package main
+
+      import (
+        "fmt"
+      )
+      var x int =100
+      // x1:=300 - not allowed outside function body
+      func main(){
+        //var name type = expression
+        var x int =3000
+        fmt.Println("x = ", x)
+        sqr, cube:=test(10)
+        fmt.Println("test Sqr = ", sqr , " Cube = " , cube)
+        sqr, cube=test1(5)
+        fmt.Println("test1 Sqr = ", sqr , " Cube = " , cube)
+      }
+
+      func test( no1 int)(int, int){
+        return no1*no1, no1*no1*no1
+      }
+
+      func test1( no1 int)(sq,cu int){
+        sq=no1*no1
+        cu=no1*no1*no1
+        return
+      }
