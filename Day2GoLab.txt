@@ -1,3 +1,37 @@
+Lab 5 -  by var x *int - x is pointing to memory not actual data,
+                        x = &i will point x to address of i, so if i gets changed later, it will be same fo *x
+            package main
+
+            import (
+                        "fmt"
+            )
+            func main(){
+                        i := 10
+                        fmt.Println(i)
+                        fmt.Println(&i)
+                        var x *int
+                        x = &i
+                        i = 400
+                        fmt.Println(x)
+                        fmt.Println(*x)
+
+            }
+Lab 4 -  by x = i, we are creating a new variable with same value, so even if original value(i) gets changed, it will not be reflected
+            package main
+
+            import (
+                        "fmt"
+            )
+            func main(){
+                        i := 10
+                        fmt.Println(i)
+                        fmt.Println(&i)
+                        x := i
+                        i = 1000
+                        fmt.Println(x)
+                        fmt.Println(&x)
+            }
+
 Lab 3 -  Write defer for single line at a time and see impact (Line number 10, 13, 18, 26)
             and then with combinations
             Observe  - impact of defer for sequence of execution, when the function parameters are getting evaluated and
