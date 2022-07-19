@@ -1,3 +1,75 @@
+Lab 3 -  Write defer for single line at a time and see impact (Line number 10, 13, 18, 26)
+            and then with combinations
+            Observe  - impact of defer for sequence of execution, when the function parameters are getting evaluated and
+                        what will be use of the same
+            package main
+
+            import (
+                  "fmt"
+            )
+
+            func main(){
+
+                  fmt.Println("Hello ")
+                  fmt.Println("1")
+                  fmt.Println("invoking test with i = 10")
+                  test(10)
+                  fmt.Println("2")
+                  str := "One"
+                  test1(str)
+                  str = "Two"
+                  test1(str)
+                  fmt.Println("3")
+                  fmt.Println("4")
+
+            }
+
+            func test(  i int){
+                  fmt.Println("\tline1 of test ")
+                  fmt.Println("\tin test " , i)
+                  fmt.Println("\tline3 of test ")
+            }
+
+
+            func test1( str string){
+                  fmt.Println("\tin test1 ", str)
+            }
+
+
+package main
+
+            import (
+                  "fmt"
+            )
+
+            func main(){
+
+                  fmt.Println("Hello ")
+                  fmt.Println("1")
+                  fmt.Println("invoking test with i = 10")
+                  test(10)
+                  fmt.Println("2")
+                  str := "One"
+                  test1(str)
+                  str = "Two"
+                  test1(str)
+                  fmt.Println("3")
+                  fmt.Println("4")
+
+            }
+
+            func test(  i int){
+                  fmt.Println("\tline1 of test ")
+                  fmt.Println("\tin test " , i)
+                  fmt.Println("\tline3 of test ")
+            }
+
+
+            func test1( str string){
+                  fmt.Println("\tin test1 ", str)
+            }
+
+
 Lab2 - Replace sqr and cube functions with go library math.power
 Lab1 - Default variable reference(method), multiple returns, named returnd
       package main
