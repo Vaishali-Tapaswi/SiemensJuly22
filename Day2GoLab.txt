@@ -1,8 +1,52 @@
-Lab 11 - Create a struct Student(Name, Marks)
+Lab 13 - Student MAP
+                -> CRUD 
+                while (){
+                
+                
+                        ask your -> C-Create , R - Read, U - Update, D - Delete
+                }
+                if user select C -> add a new entry in map
+                               R -> Show all entries in MAP
+                               U -> change existing student marks
+                               D -> Delete that student entry - delete(m, key)
+
+        
+Lab 12 - Map -> Lab4
+        package main
+
+        import "fmt"
+
+        func main(){
+                var m map[string]int;
+                m = make(map[string]int)
+                m["a"]=100
+                m["b"]=200
+                m["a"]=300
+
+                for i, v := range m {
+                        fmt.Println("i = " , i, "Value = ", v)
+                }
+                element,ok := m["a"]
+                fmt.Println("Value of element is " , element, " ok value is " , ok)
+                element,ok = m["d"]
+                fmt.Println("Value of element is " , element, " ok value is " , ok)
+              	delete(m,"a")
+	        fmt.Println("After Deletion")
+                    for i, v := range m {
+                        fmt.Println("i = " , i, "Value = ", v)
+                }
+        
+        }
+        
+        
+Lab 11 - Create a struct Student(Name, Marks) -> Lab3
         Accept a number from user, create a slice for those many students (name and marks should be accepted from user)
          initialize Slice by using make
                 a := make([]Studnet, 1)
-                
+        for i, v := range a {
+		fmt.Printf("i = " , i, "Value = ", v)
+	}
+
 Lab 10 - Dynamic Size (Lab2) - Slice
         package main
 
