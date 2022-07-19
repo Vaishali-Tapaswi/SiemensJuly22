@@ -2,6 +2,37 @@ Lab 8 - Write a struct Emp - empno int, ename string, salary int
         Write Print method to show all the details
         Write incr method accepting int arg(pern) and change salary by that %age
         
+                package main
+                import (
+                        "fmt"
+                )
+
+                type Emp struct {
+                    eno    int
+                        ename  string
+                    salary float64
+                }
+
+                func (emp Emp) printt() {
+                    fmt.Println(emp.ename)
+                    fmt.Println(emp.eno)
+                    fmt.Println(emp.salary)
+                }
+
+                func (pint *Emp) incr(page float64) {
+                    pint.salary += ((page / 100) * (pint.salary))
+                }
+
+                func main() {
+
+                    p2 := Emp{1,"AAA", 70000}
+                    p2.printt()
+                        p2.incr(10)
+                    fmt.Println("New Salary ", p2.salary)
+
+                }
+
+
 Lab 7 - Receiver Method
         package main
         import (
