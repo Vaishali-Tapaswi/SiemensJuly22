@@ -1,3 +1,25 @@
+Lab 6 - Write a method called shift(point Point, x,y as int) where point should be shifted (add x to x and y co-ordinates)
+        Write a method add accepting two points and create third point (x+x1, y+y1)
+          package main
+
+          import (
+            "fmt"
+          )
+          type Point struct {
+            x int
+            y int
+          }
+
+          func main(){
+          //	p1 := Point{1,5}
+          //	p1 := Point{y : 10}
+            p1 := Point{}
+            fmt.Println(p1)
+
+          }
+
+
+
 Lab 5 -  by var x *int - x is pointing to memory not actual data,
                         x = &i will point x to address of i, so if i gets changed later, it will be same fo *x
             package main
