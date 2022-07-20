@@ -1,5 +1,35 @@
 Lab 9 - Lab2 ->  3 options of places, choose one place from  three 
-        whichever function gets over first, is our choice (
+        whichever function gets over first, is our choice 
+                package main
+
+                import (
+                    "fmt"
+                    "time"
+                )
+                var finalmenu = ""
+                func main() {
+
+                    go print("macd")
+                    go print("pizza")
+                    //time.Sleep(2 * time.Second)              // pauses execution for 2 seconds
+                    go print( "taco")
+
+                    x := 0
+                    fmt.Scanln(&x)
+                        fmt.Println("Final Choice is " , finalmenu)
+                }
+
+                func print(flag string) {
+                    for i := 0; i <= 1000  && finalmenu == ""; i++ {
+                        fmt.Print(flag ," ")
+
+                    }
+                        if finalmenu=="" {
+                                finalmenu = flag
+                                fmt.Println("\n\nFor Loop Over for " , flag + "\n\n")
+
+                        }
+                }
 Lab 8 (Demo6_20)- Lab1
         package main
 
