@@ -1,3 +1,25 @@
+Lab 4 - Http Server -> index page with page1 and page2 as hlinks
+        package main
+
+        import (
+                "fmt"
+                "io"
+                "log"
+                "net/http"
+        )
+       func main() {
+                indexPageHandler := func(w http.ResponseWriter, req *http.Request) {
+                        io.WriteString(w, "<h1>Index Page</h1>")
+                }
+                page1Handler := func(w http.ResponseWriter, req *http.Request) {
+                        io.WriteString(w, "<h1>Page One</h1>")
+                }
+                http.HandleFunc("/", indexPageHandler)
+                http.HandleFunc("/page1", page1Handler)
+                fmt.Println("Sever starting on port 8080.....")
+                log.Fatal(http.ListenAndServe(":8080", nil))
+        }
+
 Lab 3 - 
         package main
 
