@@ -25,8 +25,13 @@ Lab6 - JSON Conversion
                 } else {
                         fmt.Println("Converted String ", string(convertedbarr))
                 }
+                str := "{\"employeenumber\":100,\"employeename\":\"Siemens\"}"
+                var emp Emp
+            json.Unmarshal([]byte(str), &emp)
+            fmt.Println(emp.Empno)
+            fmt.Println(emp.Ename)
         }
-       Write code for unmarshal
+
 
 Lab 5  (Demo5_20 folder) ->Lab1
         https://golang.org/doc/tutorial/create-module
