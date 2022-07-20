@@ -1,3 +1,23 @@
+Lab 3 - package main
+
+        import(
+                "fmt"
+                "net/http"
+        )
+
+        func main(){
+                //func (c *Client) Get(url string) (resp *Response, err error)
+                client := http.Client{}
+                resp, err := client.Get("https://reqres.in/api/users/1")
+                fmt.Println("resp = ", resp)
+                fmt.Println("err  =  ", err)
+                fmt.Println("RespBody ", resp.Body)
+                str := string(*resp.Body)
+                fmt.Println("String Body  ", str)
+                // print the actual body content
+        }
+
+
 Lab 2- Create an interface Plot with method Display
         Create two structures Point2d(x,y) and Point3d(x,y,z)
         Implement Plot for both Point2d and Point3d so that we can invoke Display method for both the structures
