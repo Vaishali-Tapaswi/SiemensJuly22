@@ -1,3 +1,35 @@
+Lab 5 
+        https://golang.org/doc/tutorial/create-module
+        1. Create a folder demo5
+                create Lab1.go
+                        package main
+
+                        import "fmt"
+                        import "github.com/magiconair/properties"
+
+                        func main() {
+                                fmt.Println("Hello, World")
+                                p := properties.MustLoadFile("simple.properties", properties.UTF8)
+                                if port, ok := p.Get("port"); ok {
+                                        fmt.Println(port)
+                                }
+                        }
+
+                create simple.properties
+                        port=8085
+
+        2. Watch messages and create module	
+                go run Lab1.go
+                        Watch error -> go help modules ->https://golang.org/doc/tutorial/create-module
+
+                Create a module 
+                        go mod init firstmod
+                                list the files , read go.mod
+                        go mod tidy
+                                list and read files , go.sum
+                        go run Lab1.go	
+
+---------------
 Lab 4 - Http Server -> index page with page1 and page2 as hlinks
         package main
 
