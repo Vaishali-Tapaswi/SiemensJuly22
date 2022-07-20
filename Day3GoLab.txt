@@ -1,3 +1,24 @@
+Lab 9 - Lab2 ->  3 options of places, choose one place from  three 
+        whichever function gets over first, is our choice (
+Lab 8 (Demo6_20)- Lab1
+        package main
+
+        import "fmt"
+
+        func main() {
+                go print(1,100,"--")
+                print(101,200,"xx")
+            x:=0
+                fmt.Scanln(&x)
+        }
+
+        func print(start, end int, flag string){
+                for i:=start;i<=end;i++{
+                        fmt.Print(flag ,"  ",i,"  ")
+                }
+        }
+         try making both calls with go, without go and one with go
+
 Lab 7 - Lab3 
         https://transform.tools/json-to-go
         Write code to accept a number
