@@ -3,7 +3,41 @@ Lab 7 - Lab3
         Write code to accept a number
         send request to https://reqres.in/api/users/number
         show name and email address of user
-        
+                package main
+
+                import (
+                    "fmt"
+                    "io/ioutil"
+                    "net/http"
+                    "strconv"
+                        "encoding/json"
+                )
+                type User struct {
+                        Data struct {
+                                ID        int    `json:"id"`
+                                Email     string `json:"email"`
+                                FirstName string `json:"first_name"`
+                                LastName  string `json:"last_name"`
+                                Avatar    string `json:"avatar"`
+                        } `json:"data"`
+                        Support struct {
+                                URL  string `json:"url"`
+                                Text string `json:"text"`
+                        } `json:"support"`
+                }
+                func main() {
+                    var num int
+                    fmt.Print("Enter a num : ")
+                    fmt.Scanln(&num)
+                    client := http.Client{}
+                    resp, _ := client.Get("https://reqres.in/api/users/" + strconv.Itoa(num))
+                    content,_:= ioutil.ReadAll(resp.Body)
+                        var user User
+                    json.Unmarshal(content, &user)
+                        fmt.Println(user.Data.Email)
+                }
+
+
 Lab6 - JSON Conversion
         package main
 
