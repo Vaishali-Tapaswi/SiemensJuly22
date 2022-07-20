@@ -1,0 +1,34 @@
+Lab 2- Create an interface Plot with method Display
+        Create two structures Point2d(x,y) and Point3d(x,y,z)
+        Implement Plot for both Point2d and Point3d so that we can invoke Display method for both the structures
+        Display method should just have print statement with co-ordinates
+
+Lab 1 - Interface
+    package main
+
+    import "fmt"
+    import "strconv"
+
+    type Emp struct {
+      empno int
+      ename string
+    }
+    func (e Emp) Convert() string {
+      str :="Emp Details[Empno = "+ strconv.Itoa(e.empno)+ " , Name = " + e.ename +"]" ;
+      return str
+    }
+
+    type Tostr interface {
+      Convert() string 
+    }
+
+
+    func main(){
+      var a Tostr;
+      e:= Emp{10,"aaa"}
+      a = e
+      fmt.Println(e.Convert())
+      fmt.Println(a.Convert())
+    }
+
+
