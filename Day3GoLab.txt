@@ -1,4 +1,34 @@
-Lab 5 
+Lab 7 - Lab3 
+        https://transform.tools/json-to-go
+        Write code to accept a number
+        send request to https://reqres.in/api/users/number
+        show name and email address of user
+        
+Lab6 - JSON Conversion
+        package main
+
+        import (
+                "encoding/json"
+                "fmt"
+        )
+
+        type Emp struct {
+                Empno int `json:"employeenumber"`
+                Ename string `json:"employeename"`
+        }
+
+        func main() {
+                e1 := Emp{10, "SSimple"}
+                convertedbarr, err := json.Marshal(e1)
+                if err != nil {
+                        fmt.Println("Error ", err)
+                } else {
+                        fmt.Println("Converted String ", string(convertedbarr))
+                }
+        }
+       Write code for unmarshal
+
+Lab 5  (Demo5_20 folder) ->Lab1
         https://golang.org/doc/tutorial/create-module
         1. Create a folder demo5
                 create Lab1.go
