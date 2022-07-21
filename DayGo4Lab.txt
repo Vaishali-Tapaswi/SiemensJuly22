@@ -1,0 +1,7 @@
+Lab 1 - 
+  import _ "github.com/go-sql-driver/mysql“
+  db, err := sql.Open("mysql","username:password@tcp(hostname:port)/dbname")
+  rows, err1 := db.Query("insert into emp values (11,'AAA',11000)")
+
+  Create a module 
+  and download depenencies
