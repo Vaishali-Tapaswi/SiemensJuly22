@@ -1,3 +1,36 @@
+Lab2 - Lab1.go
+    package main
+
+    import (
+      "fmt"
+      "database/sql"
+      _ "github.com/go-sql-driver/mysql"
+    )
+
+    func main() {
+      db, err := sql.Open("mysql", "admin:MyPassword@tcp(db.host:3306)/demo")
+      if err != nil {
+        fmt.Println("Error for Open  = ", err)
+      } else {
+        fmt.Println("Got Connection", db)
+      }
+      rows, err1 := db.Query("insert into emp values (22,'BBB',22000)")
+      if err1 != nil {
+        fmt.Println("Error for insert  = ", err1)
+      } else {
+        fmt.Println("Inserted ", rows)
+      }
+
+    }
+    /*
+    1. Create - Insert
+    2. Delete 
+    3. Update 
+    4. Retrive - Show all records 
+    */
+    //create table emp (empno numeric(2) primary key, ename varchar(20), salary numeric(9))
+
+
 Lab 1 - 
   import _ "github.com/go-sql-driver/mysql“
   db, err := sql.Open("mysql","username:password@tcp(hostname:port)/dbname")
