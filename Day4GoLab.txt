@@ -1,3 +1,46 @@
+Lab 3 - testing (Demo9_21 folder
+        create Lab1.go 
+            package main
+
+            import (
+                "fmt"
+            )
+            func add(x, y int) int{
+                return x+y
+            }
+
+            func main(){
+                x := add(30,50)
+                fmt.Println("X = ", x)
+            }
+            
+       create Lab1_test.go
+            package main
+            import "testing"
+            func TestAdd(t *testing.T) {
+                got := add(10,40)
+                if got != 500 {
+                    t.Errorf("add(10,40) = %d; want 50", got)
+                }
+            }
+        cmd>go test Lab1_test.go
+            watch error
+        cmd>go test Lab1_test.go Lab1.go
+            Success -> ok
+        Modify add method or test method
+            check fail cases
+            
+        Write one more method divide
+        
+            func divide(x, y string) int{
+                no1, _ := strconv.Atoi(x)
+                no2, _ := strconv.Atoi(y)
+                return no1/no2
+            }
+            
+       Write test function for testing divide -> x = divide("300","50"), x = divide("x","50"), x = divide("50","0")
+        
+
 Lab2 - Lab1.go
     package main
 
