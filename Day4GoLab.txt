@@ -1,3 +1,55 @@
+Lab 4 - Lab2.go 
+        package main
+
+        import (
+                "fmt"
+                "strconv"
+        )
+        func add(x, y int) int{
+                return x+y
+        }
+
+        func divide(x, y string) (int,error){
+                no1, _ := strconv.Atoi(x)
+                no2, _ := strconv.Atoi(y)
+                if no2 == 0 {
+                        return 0, fmt.Errorf("Divide Error because of zero second argument")
+                }
+                return no1/no2, nil
+        }
+        
+     Lab2_test.go
+                package main
+                import "testing"
+
+                func TestDivide1(t *testing.T) {
+                    got,_ := divide("300", "50")
+                    if got != 6 {
+                        t.Errorf("divide('300', '50') = %d; want 6", got)
+                    }
+                }
+                func TestDivide2(t *testing.T) {
+                    got,_ := divide("x", "50")
+                    if got != 0 {
+                        t.Errorf("divide('x', '50') = %d; want 0", got)
+                    }
+                }
+
+                func TestDivide3(t *testing.T) {
+                    _, err := divide("300", "0")
+                        if err == nil {
+                        t.Errorf("divide('300', '0') should have thrown error")
+                    }
+                }
+        cmd>go test Lab2_test.go Lab2.go -v
+        cmd>go test Lab2_test.go Lab2.go -cover
+        cmd>go test Lab2_test.go Lab2.go -coverprofile=tmp.txt
+        cmd>go tool cover -html=tmp.txt -o tmp.html
+                view tmp.html in browser
+                
+
+        
+
 Lab 3 - testing (Demo9_21 folder
         create Lab1.go 
             package main
