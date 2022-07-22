@@ -1,3 +1,8 @@
+Lab 4 - Create new folder (Demo11_22)
+            1. Check AWS SDK Docs
+            2. Check AWS go examples
+            Copy ListBuckets code and Run.
+
 Lab 3 - AWS Cli
             install AWS CLI
             AWS COnsole -> IAM -> Create user -> Programmatic Access -> s3readonlyaccess -> download csv file
