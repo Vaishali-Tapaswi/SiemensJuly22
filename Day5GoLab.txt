@@ -1,3 +1,33 @@
+Lab3 - Modify Lab1.go to include 
+            type Emp struct {
+                empno int
+                ename string
+                salary int
+            }
+            func savehandler(w http.ResponseWriter, r *http.Request) {
+                    emp :=Emp{}
+                    emp.empno,_ = strconv.Atoi(r.FormValue("empno"))
+                    emp.ename =   r.FormValue("ename")
+                    emp.salary, _ = strconv.Atoi( r.FormValue("salary"))
+                    fmt.Println("insertemp - savehandler invoked with ", emp)
+                    body, _ := loadPage("index")
+                    fmt.Fprintln(w, string(*body))
+                    // add emp to array and display in fmt.Println
+
+                    }
+            func main() {
+
+                http.HandleFunc("/", viewHandler)
+                http.HandleFunc("/insertemp", savehandler)
+
+                fmt.Println("Sever starting on port 8080.....")
+                log.Fatal(http.ListenAndServe(":8080", nil))
+            }
+
+        Create slice / array of emp
+        Add emp to array and print in fmt.Println
+        Modify page1.html => form action ="insertemp"
+
 Lab2 - Create a new folder Demo10_22
     Create Lab1 - 
           package main
