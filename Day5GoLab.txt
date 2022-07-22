@@ -79,8 +79,8 @@ Lab2 - Create a new folder Demo10_22
               <h1>Page One </h1>
               <form action="" method="get">
                   Empno : <input type="number" name="empno" /><br/>
-                  Ename : <input type="text" name="empno" /><br/>
-                  Salary: <input type="number" name="empno" /><br/>
+                  Ename : <input type="text" name="ename" /><br/>
+                  Salary: <input type="number" name="salary" /><br/>
                   <input type="submit"/>
               </form>
           </body>
