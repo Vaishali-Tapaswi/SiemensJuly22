@@ -1,3 +1,59 @@
+Lab2 - Create a new folder Demo10_22
+    Create Lab1 - 
+          package main
+
+          import (
+            "fmt"
+            "io/ioutil"
+            "log"
+            "net/http"
+          )
+          func loadPage(title string) (*[]byte, error) {
+            filename := "static/" + title + ".html"
+            fmt.Println(filename)
+            body, err := ioutil.ReadFile(filename)
+            if err != nil {
+              fmt.Println("ReadFile error " , err)
+              return nil, err
+            }
+            return &body, nil
+            }
+          func viewHandler(w http.ResponseWriter, r *http.Request) {
+              title := r.URL.Path[len("/"):]
+              fmt.Println("in viewHandler " , title)
+              body, _ := loadPage(title)
+              fmt.Fprintln(w, string(*body))
+              }
+          func main() {
+
+            http.HandleFunc("/", viewHandler)
+
+            fmt.Println("Sever starting on port 8080.....")
+            log.Fatal(http.ListenAndServe(":8080", nil))
+          }
+
+  Create static folder and index, page1, page2 .html files
+    index.html
+           <html>
+
+            <body>
+              <h1>Index Page</h1>
+              <h2><a href="page1">Input Emp</a></h2>
+              <h2><a href="page2">Page2</a></h2>
+            </body>
+          </html>
+    Page1.html
+        <html>
+
+          <body>
+              <h1>Page One </h1>
+              <form action="" method="get">
+                  Empno : <input type="number" name="empno" /><br/>
+                  Ename : <input type="text" name="empno" /><br/>
+                  Salary: <input type="number" name="empno" /><br/>
+                  <input type="submit"/>
+              </form>
+          </body>
+       </html>
 Lab 1 - 
   https://martinfowler.com/articles/microservices.html
-  
