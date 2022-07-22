@@ -1,3 +1,15 @@
+Lab 3 - AWS Cli
+            install AWS CLI
+            AWS COnsole -> IAM -> Create user -> Programmatic Access -> s3readonlyaccess -> download csv file
+            cmd>aws s3 ls 
+                        See error
+            cmd>aws confiure
+                        give auth details 
+                        default region -> us-east-1
+                        default output format -> none
+            cmd>aws s3 ls 
+                      list of buckets
+            
 FInal Lab1.go
             package main
 
