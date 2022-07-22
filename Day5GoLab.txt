@@ -1,3 +1,8 @@
+Lab 5 - Accept bucket name from user and create a new bucket 
+            1. Error for permission
+            2. change user permissions to give s3fullcontrol
+            3. Run 
+            
 Lab 4 - Create new folder (Demo11_22)
             1. Check AWS SDK Docs
             2. Check AWS go examples
