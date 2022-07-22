@@ -1,3 +1,5 @@
+Lab 6 - Write client to connect and download output of lambda
+
 Lab 5 - Accept bucket name from user and create a new bucket 
             1. Error for permission
             2. change user permissions to give s3fullcontrol
