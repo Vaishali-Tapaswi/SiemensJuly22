@@ -1,3 +1,66 @@
+FInal Lab1.go
+            package main
+
+            import (
+                        "fmt"
+                        "io/ioutil"
+                        "log"
+                        "net/http"
+                        "strconv"
+                        "encoding/json"
+            )
+            type Emp struct {
+                Empno int `json:"empno"`
+                        Ename string `json:"ename"`
+                        Salary int `json:"salary"`
+            }
+            // Create emp array (or slice )
+            func loadPage(title string) (*[]byte, error) {
+                        filename := "static/" + title + ".html"
+                        fmt.Println(filename)
+                        body, err := ioutil.ReadFile(filename)
+                        if err != nil {
+                                    //fmt.Println("ReadFile error " , err)
+                                    return nil, err
+                        }
+                        return &body, nil
+                        }
+            func viewHandler(w http.ResponseWriter, r *http.Request) {
+                                    title := r.URL.Path[len("/"):]
+                                    fmt.Println("in viewHandler " , title)
+                                    body, _ := loadPage(title)
+                                    fmt.Fprintln(w, string(*body))
+                                    }
+            func savehandler(w http.ResponseWriter, r *http.Request) {
+                                                emp :=Emp{}
+                                                emp.Empno,_ = strconv.Atoi(r.FormValue("empno"))
+                                                emp.Ename =   r.FormValue("ename")
+                                                emp.Salary, _ = strconv.Atoi( r.FormValue("salary"))
+                                                fmt.Println("insertemp - savehandler invoked with ", emp)
+
+                                                body, _ := loadPage("index")
+                                                fmt.Fprintln(w, string(*body))
+                                                // add emp to array and display in fmt.Println
+                                                emparr = append(emparr, emp)
+                                                fmt.Println("EmpArray " , emparr)
+
+                                                }
+            func listhandler(w http.ResponseWriter, r *http.Request) {
+                                                bytearr,_ := json.Marshal(emparr)
+                                                fmt.Println( string(bytearr))
+                                                fmt.Fprintln(w, string(bytearr))
+                                                }
+            var emparr []Emp
+            func main() {
+                        emparr = make([]Emp, 0)			
+                        http.HandleFunc("/", viewHandler)
+                        http.HandleFunc("/insertemp", savehandler)
+                        http.HandleFunc("/list", listhandler)
+
+                        fmt.Println("Sever starting on port 8080.....")
+                        log.Fatal(http.ListenAndServe(":8080", nil))
+            }
+
 Lab3 - Modify Lab1.go to include 
             type Emp struct {
                 empno int
